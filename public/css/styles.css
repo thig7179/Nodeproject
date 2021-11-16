@@ -1,0 +1,64 @@
+h3, h4 {
+    color: #ab47bc;
+}
+
+.index-page{
+    overflow: hidden;
+}
+
+.index-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    overflow: hidden;
+}
+
+.index-section img {
+    width: 101%;
+    z-index: -20;
+    margin-top: -15px;
+}
+
+.actions {
+    width: 240px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.page-header h4 {
+    margin: 0 !important;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-actions button {
+    margin: 5px 50px;
+}

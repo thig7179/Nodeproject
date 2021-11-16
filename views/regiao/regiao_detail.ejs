@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
+
+    <title>STATS - Regiões | Detalhes</title>
+
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+
+<!-- Menu -->
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper purple lighten-1">
+            <a href="/" class="brand-logo waves-effect"
+               style="display: flex; align-items: center; justify-content: center">
+                <!--    <svg style="width:40px;height:40px; margin: 0 10px 0 20px" viewBox="0 0 24 24">
+                        <path fill="white"
+                              d="M17.45,15.18L22,7.31V19L22,21H2V3H4V15.54L9.5,6L16,9.78L20.24,2.45L21.97,3.45L16.74,12.5L10.23,8.75L4.31,19H6.57L10.96,11.44L17.45,15.18Z"/>
+                    </svg>-->
+                <img src="/img/favicon.ico" width="40px" style="width: 42px; margin: 0 10px 0 25px;" alt="">
+                STATS
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger waves-effect"><i
+                        class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="waves-effect">
+                    <a href="/" style="display: flex; align-items: center; justify-content: center">
+                        <svg style="width:24px;height:24px; margin-right: 5px" viewBox="0 0 24 24">
+                            <path fill="#FFF" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="waves-effect">
+                    <a href="/regioes"
+                       style="display: flex; align-items: center; justify-content: center">
+                        <svg style="width:24px;height:24px; margin-right: 5px" viewBox="0 0 24 24">
+                            <path fill="#FFF"
+                                  d="M5,9.5L7.5,14H2.5L5,9.5M3,4H7V8H3V4M5,20A2,2 0 0,0 7,18A2,2 0 0,0 5,16A2,2 0 0,0 3,18A2,2 0 0,0 5,20M9,5V7H21V5H9M9,19H21V17H9V19M9,13H21V11H9V13Z"/>
+                        </svg>
+                        Regiões
+                    </a>
+                </li>
+                <li class="waves-effect">
+                    <a href="/cidades"
+                       style="display: flex; align-items: center; justify-content: center">
+                        <svg style="width:24px;height:24px; margin-right: 5px" viewBox="0 0 24 24">
+                            <path fill="#FFF"
+                                  d="M18,15H16V17H18M18,11H16V13H18M20,19H12V17H14V15H12V13H14V11H12V9H20M10,7H8V5H10M10,11H8V9H10M10,15H8V13H10M10,19H8V17H10M6,7H4V5H6M6,11H4V9H6M6,15H4V13H6M6,19H4V17H6M12,7V3H2V21H22V7H12Z"/>
+                        </svg>
+                        Cidades
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="waves-effect" href="/">Home</a></li>
+        <li><a class="waves-effect" href="/regioes">Regiões</a></li>
+        <li><a class="waves-effect" href="/cidades">Cidades</a></li>
+        <li><a target="_blank" class="waves-effect" href="https://www.github.com/Sarthory">GitHub</a></li>
+    </ul>
+</div>
+<!-- Menu -->
+
+<div class="page-header">
+    <h4>Detalhes da Região: <%= regiao[0].REG_DESCRICAO %></h4>
+    <a href="/regioes" class="waves-effect btn-large right action-btn  teal accent-4">
+        <svg style="width:30px;height:30px; margin-right: 5px" viewBox="0 0 24 24">
+            <path fill="#FFF"
+                  d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z"/>
+        </svg>
+        VOLTAR
+    </a>
+</div>
+<hr>
+<br><br>
+<div class="row">
+    <form class="col s12">
+
+        <div class="row">
+            <div class="col s2"></div>
+            <div class="input-field col s6">
+                <input disabled id="reg_descricao" name="reg_descricao" type="text" class="validate"
+                       value="<%= regiao[0].REG_DESCRICAO %>">
+                <label for="reg_descricao">Descrição</label>
+            </div>
+            <div class="input-field col s2">
+                <input disabled id="reg_sigla" name="reg_sigla" type="text" class="validate"
+                       value="<%= regiao[0].REG_SIGLA %>">
+                <label for="reg_sigla">Sigla</label>
+            </div>
+            <div class="col s2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col s2"></div>
+            <div class="input-field col s4">
+                <input disabled id="reg_area_km2" name="reg_area_km2" type="number" class="validate"
+                       value="<%= regiao[0].REG_AREA_KM2 %>">
+                <label for="reg_area_km2">Área em KM²</label>
+            </div>
+            <div class="input-field col s4">
+                <input disabled id="reg_valor_pib" name="reg_valor_pib" type="number" class="validate"
+                       value="<%= regiao[0].REG_VALOR_PIB %>">
+                <label for="reg_valor_pib">Valor PIB R$</label>
+            </div>
+            <div class="col s2"></div>
+        </div>
+
+        <div class="form-actions">
+            <button disabled class="btn waves-effect btn-large action-btn green accent-3">
+                <svg style="width:25px;height:25px; margin-right: 10px" viewBox="0 0 24 24">
+                    <path fill="#FFF"
+                          d="M17,7V3H7V7H17M14,17A3,3 0 0,0 17,14A3,3 0 0,0 14,11A3,3 0 0,0 11,14A3,3 0 0,0 14,17M19,1L23,5V17A2,2 0 0,1 21,19H7C5.89,19 5,18.1 5,17V3A2,2 0 0,1 7,1H19M1,7H3V21H17V23H3A2,2 0 0,1 1,21V7Z"/>
+                </svg>
+                SALVAR
+            </button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>
